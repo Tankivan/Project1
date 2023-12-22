@@ -1,1 +1,25 @@
 Парадиев Иван
+
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int fact, n;
+    double Q = 0;
+    cin >> n;
+    for (int k = 1; k <= n; k++)
+    {
+        if (k == 3)
+            continue;
+        fact = 1;
+        for (int i = 1; i <= k; i++)
+            fact *= i;
+        Q += ((pow(k-3, k-5) * (k+7)) / fact);
+    }
+    cout << "Q = " << Q << endl;
+    return 0;
+}
